@@ -5,28 +5,28 @@ import { Monitor, Smartphone, Cloud, BarChart3, ShoppingCart, GraduationCap } fr
 const products = [
   {
     id: 1,
-    name: "Sistema de Gestão Escolar",
+    name: "Yhanko Educa",
     description: "Plataforma completa para gestão educacional com controle de alunos, notas, frequência e comunicação.",
     icon: GraduationCap,
     color: "from-primary to-purple-light",
   },
   {
     id: 2,
-    name: "Aplicações Web",
+    name: "Turismo",
     description: "Desenvolvimento de aplicações web modernas, responsivas e escaláveis com as melhores tecnologias.",
     icon: Monitor,
     color: "from-secondary to-pink-light",
   },
   {
     id: 3,
-    name: "Aplicações Mobile",
+    name: "Change money",
     description: "Apps nativos e híbridos para iOS e Android com experiência de usuário excepcional.",
     icon: Smartphone,
     color: "from-primary to-secondary",
   },
   {
     id: 4,
-    name: "Soluções Cloud",
+    name: "keco-kitoco",
     description: "Infraestrutura em nuvem, migração e gerenciamento de serviços cloud.",
     icon: Cloud,
     color: "from-purple-light to-primary",
@@ -89,9 +89,9 @@ export function SolutionsSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 onClick={() => setActiveProduct(product)}
-                className={`w-full h-12 p-4 rounded-full text-left transition-all flex items-center gap-4 ${
+                className={`w-full h-12 p-4 border-none bg-transparent text-left transition-all flex items-center gap-4 ${
                   activeProduct.id === product.id
-                    ? "bg-gradient-to-r from-primary/20 to-secondary/20 border-l-4 border-primary"
+                    ? "bg-transparent hover:cursor-pointer border-b-4 border"
                     : "bg-card hover:bg-muted border-l-4 border-transparent"
                 }`}
               >
@@ -137,13 +137,6 @@ export function SolutionsSection() {
                 <p className="text-muted-foreground leading-relaxed">
                   {activeProduct.description}
                 </p>
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="mt-6 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary text-foreground font-semibold"
-                >
-                  Saber Mais
-                </motion.button>
               </div>
             </motion.div>
           </motion.div>

@@ -68,15 +68,15 @@ export function AboutSection() {
             </p>
             <div className="flex gap-8">
               <div className="text-center">
-                <span className="text-4xl font-bold gradient-text">50+</span>
+                <span className="text-4xl font-bold text-purple-700">3+</span>
                 <p className="text-sm text-muted-foreground mt-1">Projetos</p>
               </div>
               <div className="text-center">
-                <span className="text-4xl font-bold gradient-text">3+</span>
+                <span className="text-4xl font-bold text-purple-700">2+</span>
                 <p className="text-sm text-muted-foreground mt-1">Anos</p>
               </div>
               <div className="text-center">
-                <span className="text-4xl font-bold gradient-text">100%</span>
+                <span className="text-4xl font-bold text-purple-700">100%</span>
                 <p className="text-sm text-muted-foreground mt-1">Dedicação</p>
               </div>
             </div>
