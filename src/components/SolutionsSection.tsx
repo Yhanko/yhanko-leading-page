@@ -74,13 +74,13 @@ export function SolutionsSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div >
           {/* Product List */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-2"
+            className="space-x-2 flex overflow-x-auto mb-10 lg:mb-0 lg:space-x-0 lg:flex lg:gap-4 lg:overflow-x-auto lg:col-span-1"
           >
             {products.map((product, index) => (
               <motion.button
@@ -89,7 +89,7 @@ export function SolutionsSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 onClick={() => setActiveProduct(product)}
-                className={`w-full p-4 rounded-xl text-left transition-all flex items-center gap-4 ${
+                className={`w-full h-12 p-4 rounded-full text-left transition-all flex items-center gap-4 ${
                   activeProduct.id === product.id
                     ? "bg-gradient-to-r from-primary/20 to-secondary/20 border-l-4 border-primary"
                     : "bg-card hover:bg-muted border-l-4 border-transparent"

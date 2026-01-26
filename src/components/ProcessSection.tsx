@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { MessageSquare, FileSearch, GitBranch, Search, Calendar, Palette, Code, TestTube, Rocket, Settings } from "lucide-react";
 
 const phases = [
-  { step: 1, name: "Conversa com Cliente", icon: MessageSquare, description: "Reunião inicial para entender necessidades" },
+  { step: 1, name: "Reunião", icon: MessageSquare, description: "Reunião inicial para entender necessidades" },
   { step: 2, name: "Levantamento de Requisitos", icon: FileSearch, description: "Documentação detalhada do projeto" },
   { step: 3, name: "Metodologias Ágeis", icon: GitBranch, description: "Escolha do framework de trabalho" },
   { step: 4, name: "Análise", icon: Search, description: "Estudo de viabilidade e escopo" },

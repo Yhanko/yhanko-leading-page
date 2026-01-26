@@ -45,7 +45,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
             >
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center animate-pulse-glow backdrop-blur-sm border border-border/50">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center animate-pulse-glow backdrop-blur-sm border border-border/50 -top-5 left-3.5">
                 <img src={yhankoLogo} alt="Yhanko" className="w-24 md:w-32 object-contain" />
               </div>
             </motion.div>
@@ -61,7 +61,7 @@ export function HeroSection() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="absolute top-1/2 left-1/2"
+                  className="absolute top-1/2 left-3.5"
                   style={{
                     animation: `orbit ${20 + index * 2}s linear infinite`,
                     animationDelay: `${-tech.delay}s`,
