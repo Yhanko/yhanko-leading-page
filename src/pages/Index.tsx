@@ -4,20 +4,21 @@ import { AboutSection } from "@/components/AboutSection";
 import { SolutionsSection } from "@/components/SolutionsSection";
 import { SectorsSection } from "@/components/SectorsSection";
 import { CarouselSection } from "@/components/CarouselSection";
+import { EventsSection } from "@/components/EventsSection";
 import { AcademySection } from "@/components/AcademySection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 
 // Client logos
-import roseartAtelier from "@/assets/clients/roseart-atelier.jpeg";
-import margem from "@/assets/clients/margem.jpeg";
-import ghettoArt from "@/assets/clients/ghetto-art.jpeg";
+import roseartAtelier from "@/assets/clients/rosarte-logo.png";
+import margem from "@/assets/clients/margem.png";
+import ghettoArt from "@/assets/clients/ghetto-art.png";
 
 // Partner logos
 import fdf from "@/assets/partners/fdf.jpeg";
-import educaRealiza from "@/assets/partners/educa-realiza.jpeg";
-import acaoDigital from "@/assets/partners/acao-digital.jpeg";
+import educaRealiza from "@/assets/partners/educa-e-realiza.png";
+import acaoDigital from "@/assets/partners/acao-digital.png";
 
 // Team photos
 import ceoPhoto from "@/assets/team/ceo.jpeg";
@@ -83,6 +84,7 @@ const Index = () => {
           items={team}
           isLogo={false}
         />
+        <EventsSection />
         <AcademySection />
         <ProcessSection />
         <FAQSection />

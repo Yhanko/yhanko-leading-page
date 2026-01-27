@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import yhankoLogo from "@/assets/yhanko-logo.png";
+import yhankoLogo from "@/assets/ee 1.svg";
 
 const navLinks = [
   { name: "Início", href: "#inicio" },
@@ -43,7 +43,7 @@ export function Header() {
           href="#inicio"
           whileHover={{ scale: 1.05 }}
         >
-          <img src={yhankoLogo} alt="Yhanko" className="h-8 md:h-10" />
+          <img src={yhankoLogo} alt="Yhanko" className="h-16 md:h-16" />
         </motion.a>
 
         {/* Desktop Navigation */}

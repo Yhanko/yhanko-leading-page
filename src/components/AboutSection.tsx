@@ -59,12 +59,10 @@ export function AboutSection() {
           >
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Somos uma empresa de desenvolvimento de software e soluções tecnológicas 
-              inovadoras e multissectoriais com foco no bem-estar das pessoas e melhoria 
-              no processo do dia a dia.
+              inovadoras multissectoriais com foco o propósito de transformar e simplisficar processos do dia a dia.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Nossa missão é transformar desafios complexos em soluções digitais elegantes, 
-              utilizando as mais modernas tecnologias e metodologias de desenvolvimento.
+              Transformamos desafios em soluções tecnológicas acessíveis, inovadoras e eficientes, conectando pessoas a um futuro mais inteligente com responsabilidade, transparência e inclusão.
             </p>
             <div className="flex gap-8">
               <div className="text-center">
