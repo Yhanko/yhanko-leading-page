@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { BookOpen, Users, Award, Play } from "lucide-react";
+import { BookOpen, Users, Brain } from "lucide-react";
+import bannerAcademia from "@/assets/banner_academia_yhanko.png";
 
 export function AcademySection() {
   const ref = useRef(null);
@@ -31,8 +32,7 @@ export function AcademySection() {
               Academia da <span className="gradient-text">Yhanko</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Formamos os profissionais do futuro com cursos práticos em tecnologia, 
-              desenvolvimento de software e inovação digital. Aprenda com quem faz.
+              A Academia Yhanko é um espaço de formação prática e direcionada para quem deseja ingressar ou evoluir na área de programação e tecnologia — e também para quem busca desenvolver habilidades essenciais para o mercado de trabalho como um todo.
             </p>
             
             <div className="grid grid-cols-3 gap-6 mb-8">
@@ -41,21 +41,21 @@ export function AcademySection() {
                   <BookOpen className="w-6 h-6 text-primary" />
                 </div>
                 <span className="text-2xl font-bold gradient-text">10+</span>
-                <p className="text-xs text-muted-foreground mt-1">Cursos</p>
+                <p className="text-xs text-muted-foreground mt-1">Desafios</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-secondary/20 flex items-center justify-center">
                   <Users className="w-6 h-6 text-secondary" />
                 </div>
-                <span className="text-2xl font-bold gradient-text">500+</span>
+                <span className="text-2xl font-bold gradient-text">3+</span>
                 <p className="text-xs text-muted-foreground mt-1">Alunos</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <Award className="w-6 h-6 text-primary" />
+                  <Brain className="w-6 h-6 text-primary" />
                 </div>
-                <span className="text-2xl font-bold gradient-text">95%</span>
-                <p className="text-xs text-muted-foreground mt-1">Aprovação</p>
+                <span className="text-2xl font-bold gradient-text">99%</span>
+                <p className="text-xs text-muted-foreground mt-1">Prática</p>
               </div>
             </div>
 
@@ -64,7 +64,7 @@ export function AcademySection() {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-foreground font-semibold glow-effect"
             >
-              Inscreva-se Agora
+              100% Online no Discord
             </motion.button>
           </motion.div>
 
@@ -79,23 +79,11 @@ export function AcademySection() {
               <div className="rounded-xl bg-card overflow-hidden">
                 <div className="h-72 md:h-96 bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center relative">
                   {/* Pattern Overlay */}
-                  <div className="absolute inset-0 opacity-20">
-                    <div 
-                      className="h-full w-full"
-                      style={{
-                        backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground) / 0.3) 1px, transparent 0)`,
-                        backgroundSize: '20px 20px'
-                      }}
-                    />
-                  </div>
-                  
-                  {/* Play Button */}
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className="w-20 h-20 rounded-full bg-foreground/90 flex items-center justify-center cursor-pointer shadow-2xl"
-                  >
-                    <Play className="w-8 h-8 text-background ml-1" />
-                  </motion.div>
+                   <img 
+                    src={bannerAcademia} 
+                    alt="Academia Yhanko - Venha fazer parte da nossa academia"
+                    className="w-full h-auto object-cover"
+                  />
                   
                   {/* Floating Elements */}
                   <motion.div
@@ -103,14 +91,14 @@ export function AcademySection() {
                     transition={{ repeat: Infinity, duration: 4 }}
                     className="absolute top-8 right-8 px-4 py-2 rounded-full bg-card/90 backdrop-blur text-sm font-medium"
                   >
-                    📚 Cursos Online
+                    Reuniões Online
                   </motion.div>
                   <motion.div
                     animate={{ y: [10, -10, 10] }}
                     transition={{ repeat: Infinity, duration: 5 }}
                     className="absolute bottom-8 left-8 px-4 py-2 rounded-full bg-card/90 backdrop-blur text-sm font-medium"
                   >
-                    🎓 Certificados
+                    🎓 Conhecimento
                   </motion.div>
                 </div>
               </div>

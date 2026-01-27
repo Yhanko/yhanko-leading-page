@@ -6,7 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 // Event images
 import workshopEducaRealiaza from "@/assets/events/educa-realiza.png";
 import hackathonImg from "@/assets/events/workshop.jpg";
-import meetupImg from "@/assets/events/meetup.jpeg";
+import meetupImg from "@/assets/events/yhankoEduca.jpeg";
 import workshopImg from "@/assets/events/workshop.jpg";
 
 interface Event {
@@ -32,16 +32,16 @@ const events: Event[] = [
     title: "Workshop YhankoEduca",
     date: "29 Nov 2025",
     location: "Dom Bosco, Sambizanga, Luanda, Angola",
-    image: workshopImg,
+    image: meetupImg,
     status: "past",
   },
   {
     id: 3,
-    title: "Meetup de Desenvolvedores",
-    date: "10 Jun 2025",
-    location: "Luanda, Angola",
-    image: meetupImg,
-    status: "upcoming",
+    title: "Workshop YhankoEduca",
+    date: "29 Nov 2025",
+    location: "Dom Bosco, Sambizanga, Luanda, Angola",
+    image: workshopImg,
+    status: "past",
   },
 ];
 

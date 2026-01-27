@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { MessageSquare, FileSearch, GitBranch, Search, Calendar, Palette, Code, TestTube, Rocket, Settings } from "lucide-react";
 
+
 const phases = [
   { step: 1, name: "Reunião", icon: MessageSquare, description: "Reunião inicial para entender necessidades" },
   { step: 2, name: "Levantamento de Requisitos", icon: FileSearch, description: "Documentação detalhada do projeto" },
