@@ -32,6 +32,10 @@ const faqs = [
     question: "A Yhanko desenvolve aplicativos mobile?",
     answer: "Sim, desenvolvemos aplicativos nativos para iOS e Android, além de soluções híbridas com Flutter e React Native que funcionam em ambas as plataformas."
   },
+  {
+    question: "Como funciona a academia da Yhanko?",
+    answer: "O aluno escolhe a tecnologia que quer ou está a aprender, é lhe direcionado às aulas que ele precisará, semanalmente recebe desafio entre outras informações, no final de semana reunem para apresetação dos desafios, colaboram entre alunos em projetos reais e têm oportunidade de falar com pofissionais de diversas áreas."
+  },
 ];
 
 export function FAQSection() {
