@@ -83,27 +83,19 @@ export function CarouselSection({ id, tag, title, highlightedTitle, items, isLog
                   transition={{ delay: 0.3 + index * 0.1 }}
                   className="flex-shrink-0 w-64 md:w-80"
                 >
-                  <div className="rounded-2xl bg-card border border-border overflow-hidden card-hover">
+                  <div className="w-48 h-48 rounded-full border border-border">
                     {/* Avatar/Logo */}
-                    <div className={`${isLogo ? 'h-40' : 'h-48'} bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-6`}>
+                    <div className={`${isLogo ? 'h-44' : 'h-48'} flex items-center justify-center p-6`}>
                       {item.image ? (
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className={`${isLogo ? 'w-full h-full object-contain' : 'w-32 h-32 rounded-full object-cover border-4 border-primary/30'}`}
+                          className={`${isLogo ? 'rounded-full w-full h-full object-cover object-center' : 'w-48 h-48 rounded-full object-cover border-4 border-primary/30'}`}
                         />
                       ) : (
                         <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                           <span className="text-2xl font-bold text-foreground">{item.name.charAt(0)}</span>
                         </div>
-                      )}
-                    </div>
-                    
-                    {/* Info */}
-                    <div className="p-6 text-center">
-                      <h3 className="font-bold text-lg">{item.name}</h3>
-                      {item.role && (
-                        <p className="text-sm text-muted-foreground mt-1">{item.role}</p>
                       )}
                     </div>
                   </div>

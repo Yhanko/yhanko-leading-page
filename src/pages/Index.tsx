@@ -31,7 +31,6 @@ const clients = [
   { id: 1, name: "RoseArte Atelier", image: roseartAtelier },
   { id: 2, name: "Margem", image: margem },
   { id: 3, name: "Ghetto Art", image: ghettoArt },
-  { id: 4, name: "RoseArte Atelier", image: roseartAtelier },
   { id: 5, name: "Margem", image: margem },
 ];
 
@@ -39,8 +38,7 @@ const partners = [
   { id: 1, name: "FDF", image: fdf },
   { id: 2, name: "Educa e Realiza", image: educaRealiza },
   { id: 3, name: "Ação Digital", image: acaoDigital },
-  { id: 4, name: "FDF", image: fdf },
-  { id: 5, name: "Educa e Realiza", image: educaRealiza },
+  { id: 4, name: "Ghetto Art", image: ghettoArt },
 ];
 
 const team = [

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowUp } from "lucide-react";
+import yhankoLogo from "@/assets/ee 1.svg";
 
 const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
+  { name: "Facebook", icon: Facebook, href: "" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/yhankotech/" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/yhanko-corporation/?viewAsMember=true" },
   { name: "Twitter", icon: Twitter, href: "#" },
 ];
 
@@ -37,7 +38,7 @@ export function Footer() {
               whileInView={{ opacity: 1 }}
               className="text-3xl font-bold gradient-text mb-6"
             >
-              YHANKO
+              <img src={yhankoLogo} alt="logotipo yhanko" />
             </motion.h3>
             <p className="text-muted-foreground mb-6">
               Transformando ideias em soluções digitais inovadoras para um futuro melhor.
@@ -86,13 +87,13 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                 <a href="tel:+244900000000" className="text-muted-foreground hover:text-foreground transition-colors">
-                  +244 900 000 000
+                  +244 947 315 059
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a href="mailto:contato@yhanko.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                  contato@yhanko.com
+                  geral@yhanko.com
                 </a>
               </li>
             </ul>
