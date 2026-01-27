@@ -102,7 +102,7 @@ export function EventsSection() {
 
           {/* Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+            <div className="flex gap-6 justify-center items-center">
               {events.map((event, index) => (
                 <motion.div
                   key={event.id}

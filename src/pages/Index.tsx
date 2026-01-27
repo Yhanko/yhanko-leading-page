@@ -52,7 +52,6 @@ const team = [
   { id: 5, name: "Manuel Malanga", role: "Secretário Geral", image: manuel },
   { id: 6, name: "Hélio Mendonça", role: "Contabilista Júnior", image: helio },
   { id: 7, name: "Osvaldo Pedro", role: "Backend Developer", image: osvaldo },
-  { id: 8, name: "Marcelo Vica", role: "UI/UX Lead Designer", image: osvaldo },
 ];
 
 const Index = () => {

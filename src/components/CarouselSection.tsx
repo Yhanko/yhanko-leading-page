@@ -85,12 +85,12 @@ export function CarouselSection({ id, tag, title, highlightedTitle, items, isLog
                 >
                   <div className="w-48 h-48 rounded-full border border-border">
                     {/* Avatar/Logo */}
-                    <div className={`${isLogo ? 'h-44' : 'h-48'} flex items-center justify-center p-6`}>
+                    <div className={`${isLogo ? 'h-48' : 'h-48'} flex items-center justify-center p-6`}>
                       {item.image ? (
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className={`${isLogo ? 'rounded-full w-full h-full object-cover object-center' : 'w-44 h-44 rounded-full object-cover border-4 border-primary/30'}`}
+                          className={`${isLogo ? 'rounded-full w-full h-full object-cover object-center' : 'w-32 h-32 rounded-full object-cover border-4 border-primary/30'}`}
                         />
                       ) : (
                         <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
