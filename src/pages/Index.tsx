@@ -21,11 +21,14 @@ import educaRealiza from "@/assets/partners/educa-e-realiza.png";
 import acaoDigital from "@/assets/partners/acao-digital.png";
 
 // Team photos
-import ceoPhoto from "@/assets/team/ceo.jpeg";
-import ctoPhoto from "@/assets/team/cto.jpeg";
-import designerPhoto from "@/assets/team/designer.jpeg";
-import developerPhoto from "@/assets/team/developer.jpeg";
-import marketingPhoto from "@/assets/team/marketing.jpeg";
+import cajamba from "@/assets/team/romeu.jpeg";
+import osvaldo from "@/assets/team/osvaldo.jpeg";
+import bruno from "@/assets/team/bruno.png";
+import helio from "@/assets/team/helio.jpeg";
+import joel from "@/assets/team/joel.png";
+import kalei from "@/assets/team/kalei.jpg";
+import manuel from "@/assets/team/manuel.jpeg";
+
 
 const clients = [
   { id: 1, name: "RoseArte Atelier", image: roseartAtelier },
@@ -42,11 +45,14 @@ const partners = [
 ];
 
 const team = [
-  { id: 1, name: "João Silva", role: "Chief Executive Officer", image: ceoPhoto },
-  { id: 2, name: "Pedro Santos", role: "Chief Technology Officer", image: ctoPhoto },
-  { id: 3, name: "Ana Fernandes", role: "UI/UX Lead Designer", image: designerPhoto },
-  { id: 4, name: "Miguel Costa", role: "Full Stack Developer", image: developerPhoto },
-  { id: 5, name: "Carla Mendes", role: "Marketing Manager", image: marketingPhoto },
+  { id: 1, name: "Romeu Cajamba", role: "Chief Executive Officer", image: cajamba },
+  { id: 2, name: "Bruno Paulo", role: "Designer Gráfico", image: bruno },
+  { id: 3, name: "Kalei Diogo", role: "Contabilista Sênior", image: kalei },
+  { id: 4, name: "Joel da Silva", role: "Full Stack Developer", image: joel },
+  { id: 5, name: "Manuel Malanga", role: "Secretário Geral", image: manuel },
+  { id: 6, name: "Hélio Mendonça", role: "Contabilista Júnior", image: helio },
+  { id: 7, name: "Osvaldo Pedro", role: "Backend Developer", image: osvaldo },
+  { id: 8, name: "Marcelo Vica", role: "UI/UX Lead Designer", image: osvaldo },
 ];
 
 const Index = () => {

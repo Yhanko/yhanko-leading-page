@@ -90,7 +90,7 @@ export function CarouselSection({ id, tag, title, highlightedTitle, items, isLog
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className={`${isLogo ? 'rounded-full w-full h-full object-cover object-center' : 'w-48 h-48 rounded-full object-cover border-4 border-primary/30'}`}
+                          className={`${isLogo ? 'rounded-full w-full h-full object-cover object-center' : 'w-44 h-44 rounded-full object-cover border-4 border-primary/30'}`}
                         />
                       ) : (
                         <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
