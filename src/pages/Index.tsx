@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { SolutionsSection } from "@/components/SolutionsSection";
 import { SectorsSection } from "@/components/SectorsSection";
 import { CarouselSection } from "@/components/CarouselSection";
+import { TeamYhanko } from "@/components/TeamSection";
 import { EventsSection } from "@/components/EventsSection";
 import { AcademySection } from "@/components/AcademySection";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -13,12 +14,12 @@ import { Footer } from "@/components/Footer";
 // Client logos
 import roseartAtelier from "@/assets/clients/rosarte-logo.png";
 import margem from "@/assets/clients/margem.png";
-import ghettoArt from "@/assets/clients/ghetto-art.png";
 
 // Partner logos
 import fdf from "@/assets/partners/fdf.jpeg";
 import educaRealiza from "@/assets/partners/educa-e-realiza.png";
 import acaoDigital from "@/assets/partners/acao-digital.png";
+import ghettoArt from "@/assets/clients/ghetto-art.png";
 
 // Team photos
 import cajamba from "@/assets/team/romeu.jpeg";
@@ -33,8 +34,6 @@ import manuel from "@/assets/team/manuel.jpeg";
 const clients = [
   { id: 1, name: "RoseArte Atelier", image: roseartAtelier },
   { id: 2, name: "Margem", image: margem },
-  { id: 3, name: "Ghetto Art", image: ghettoArt },
-  { id: 5, name: "Margem", image: margem },
 ];
 
 const partners = [
@@ -79,13 +78,7 @@ const Index = () => {
           items={partners}
           isLogo={true}
         />
-        <CarouselSection
-          id="team"
-          tag="Equipe"
-          title="Nosso"
-          highlightedTitle="Team"
-          items={team}
-          isLogo={false}
+        <TeamYhanko
         />
         <EventsSection />
         <AcademySection />
