@@ -1,49 +1,43 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Monitor, Smartphone, Cloud, BarChart3, ShoppingCart, GraduationCap } from "lucide-react";
+import gestaoEscolarImg from "@/assets/solutions/yhankoEduca.png";
+import webAppsImg from "@/assets/solutions/turismo.png";
+import mobileAppsImg from "@/assets/solutions/recolha-lixo.png";
+import cloudImg from "@/assets/solutions/change.png";
 
 const products = [
   {
     id: 1,
-    name: "Yhanko Educa",
-    description: "Plataforma completa para gestão educacional com controle de alunos, notas, frequência e comunicação.",
+    name: "YhankoEduca",
+    description: "Plataforma completa para gestão educacional com controle de alunos, notas e comunicação.",
     icon: GraduationCap,
     color: "from-primary to-purple-light",
+    image: gestaoEscolarImg,
   },
   {
     id: 2,
     name: "Turismo",
-    description: "Desenvolvimento de aplicações web modernas, responsivas e escaláveis com as melhores tecnologias.",
+    description: "Plataforma para turismo que junta turistas, entidade turísticas e guias turistas",
     icon: Monitor,
     color: "from-secondary to-pink-light",
+    image: webAppsImg,
   },
   {
     id: 3,
-    name: "Change money",
-    description: "Apps nativos e híbridos para iOS e Android com experiência de usuário excepcional.",
+    name: "Eco-kitoco",
+    description: "Plataforma de recolha de lixo que promove a higiene comunitária, a saúde e bem-estar ambiental.",
     icon: Smartphone,
     color: "from-primary to-secondary",
+    image: mobileAppsImg,
   },
   {
     id: 4,
-    name: "keco-kitoco",
-    description: "Infraestrutura em nuvem, migração e gerenciamento de serviços cloud.",
+    name: "KwanzaConnect",
+    description: "Plataforma que une compradores, vendores e casas de câmbio em um só lugar.",
     icon: Cloud,
     color: "from-purple-light to-primary",
-  },
-  {
-    id: 5,
-    name: "Business Intelligence",
-    description: "Análise de dados e dashboards para tomada de decisões estratégicas.",
-    icon: BarChart3,
-    color: "from-pink-light to-secondary",
-  },
-  {
-    id: 6,
-    name: "E-Commerce",
-    description: "Lojas virtuais completas com gestão de produtos, pagamentos e logística.",
-    icon: ShoppingCart,
-    color: "from-secondary to-primary",
+    image: cloudImg,
   },
 ];
 
@@ -74,7 +68,7 @@ export function SolutionsSection() {
           </p>
         </motion.div>
 
-        <div >
+        <div>
           {/* Product List */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -89,15 +83,12 @@ export function SolutionsSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 onClick={() => setActiveProduct(product)}
-                className={`w-full h-12 p-4 border-none bg-transparent text-left transition-all flex items-center gap-4 ${
+                className={`w-full h-12 p-4 border hover:border-b-2 border-r-0 border-l-0 border-t-0 bg-transparent text-left transition-all flex items-center gap-4 mb-10${
                   activeProduct.id === product.id
                     ? "bg-transparent hover:cursor-pointer border-b-4 border"
                     : "bg-card hover:bg-muted border-l-4 border-transparent"
                 }`}
               >
-                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${product.color} flex items-center justify-center`}>
-                  <product.icon className="w-5 h-5 text-foreground" />
-                </div>
                 <span className="font-medium">{product.name}</span>
               </motion.button>
             ))}
@@ -118,17 +109,13 @@ export function SolutionsSection() {
               className="h-full rounded-2xl bg-card border border-border overflow-hidden"
             >
               {/* Product Image Placeholder */}
-              <div className={`h-64 md:h-80 bg-gradient-to-br ${activeProduct.color} flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 opacity-30">
-                  <div 
-                    className="h-full w-full"
-                    style={{
-                      backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground) / 0.3) 1px, transparent 0)`,
-                      backgroundSize: '30px 30px'
-                    }}
-                  />
-                </div>
-                <activeProduct.icon className="w-24 h-24 text-foreground/80" />
+              <div className="h-[60rem] md:h-[40rem] relative overflow-hidden">
+                <img 
+                  src={activeProduct.image} 
+                  alt={activeProduct.name}
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t ${activeProduct.color} opacity-20`} />
               </div>
               
               {/* Product Info */}

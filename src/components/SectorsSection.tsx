@@ -1,27 +1,29 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { GraduationCap, Leaf, Wallet } from "lucide-react";
+import educacao from "@/assets/sectors/educacional.jpg";
+import ambiental from "@/assets/sectors/ambiental.jpg";
+import tecnologico from "@/assets/sectors/tecnologia.png";
 
 const sectors = [
   {
     id: 1,
     name: "Educacional",
-    description: "Soluções para escolas, universidades e plataformas de ensino à distância.",
-    icon: GraduationCap,
+    description: "Soluções para escolas, universidades.",
+    icon: educacao,
     color: "from-primary to-purple-light",
   },
   {
     id: 2,
     name: "Ambiental",
-    description: "Tecnologias para monitoramento e gestão ambiental sustentável.",
-    icon: Leaf,
+    description: "Plataformas e soluções que contribuem para uma comunidade e saúde melhor.",
+    icon: ambiental ,
     color: "from-emerald-500 to-green-400",
   },
   {
     id: 3,
-    name: "Financeiro",
-    description: "Sistemas de gestão financeira, pagamentos e fintechs.",
-    icon: Wallet,
+    name: "Tecnológico",
+    description: "Sistemas que ajudam a resolver problemas do dia a dia.",
+    icon: tecnologico,
     color: "from-secondary to-pink-light",
   },
 ];
@@ -48,7 +50,7 @@ export function SectorsSection() {
             Sectores que <span className="gradient-text">Atuamos</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Somos focados no sector educacional, ambiental e financeiro.
+            Somos focados no sector educacional, mas abertos para trazer solução para vários sectores.
           </p>
         </motion.div>
 
@@ -73,7 +75,7 @@ export function SectorsSection() {
                       }}
                     />
                   </div>
-                  <sector.icon className="w-20 h-20 text-foreground/90 group-hover:scale-110 transition-transform duration-300" />
+                  <img src={sector.icon} className="w-full h-full text-foreground/90 group-hover:scale-110 transition-transform duration-300 object-cover object-center" />
                 </div>
                 
                 {/* Content */}
