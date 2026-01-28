@@ -1,7 +1,12 @@
+emailjs.init("md-N74Y77bS9eGpsm");
+
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowUp, MessageCircle } from "lucide-react";
+
 import yhankoLogo from "@/assets/ee 1.svg";
+
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/YhankoTech" },
@@ -33,11 +38,12 @@ export function Footer() {
       "md-N74Y77bS9eGpsm"
     ).then(
       () => {
-        alert("E-mail enviado com sucesso!");
+        toast.success("Inscrição realizada com sucesso 🚀");
+      e.target.reset();
       },
       (error) => {
-        alert("Erro ao enviar");
-        console.error(error);
+        toast.error("Erro ao enviar. Tente novamente.");
+        console.error("EmailJS error:", error);
       }
     );
 
