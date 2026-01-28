@@ -4,7 +4,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { SolutionsSection } from "@/components/SolutionsSection";
 import { SectorsSection } from "@/components/SectorsSection";
 import { ClientsSection } from "@/components/ClientsSection";
-import { TeamYhanko } from "@/components/TeamSection";
+import { TeamSection } from "@/components/TeamSection";
 import { EventsSection } from "@/components/EventsSection";
 import { AcademySection } from "@/components/AcademySection";
 import { ProcessSection } from "@/components/ProcessSection";
@@ -32,28 +32,6 @@ import kalei from "@/assets/team/kalei.jpg";
 import manuel from "@/assets/team/manuel.jpeg";
 
 
-const clients = [
-  { id: 1, name: "RoseArte Atelier", image: roseartAtelier },
-  { id: 2, name: "Margem", image: margem },
-];
-
-const partners = [
-  { id: 1, name: "FDF", image: fdf },
-  { id: 2, name: "Educa e Realiza", image: educaRealiza },
-  { id: 3, name: "Ação Digital", image: acaoDigital },
-  { id: 4, name: "Ghetto Art", image: ghettoArt },
-];
-
-const team = [
-  { id: 1, name: "Romeu Cajamba", role: "Chief Executive Officer", image: cajamba },
-  { id: 2, name: "Bruno Paulo", role: "Designer Gráfico", image: bruno },
-  { id: 3, name: "Kalei Diogo", role: "Contabilista Sênior", image: kalei },
-  { id: 4, name: "Joel da Silva", role: "Full Stack Developer", image: joel },
-  { id: 5, name: "Manuel Malanga", role: "Secretário Geral", image: manuel },
-  { id: 6, name: "Hélio Mendonça", role: "Contabilista Júnior", image: helio },
-  { id: 7, name: "Osvaldo Pedro", role: "Backend Developer", image: osvaldo },
-];
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -64,7 +42,7 @@ const Index = () => {
         <SolutionsSection />
         <SectorsSection />
         <ClientsSection />
-        <TeamYhanko
+        <TeamSection
         />
         <EventsSection />
         <AcademySection />

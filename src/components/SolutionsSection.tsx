@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Monitor, Smartphone, Cloud, BarChart3, ShoppingCart, GraduationCap, ArrowRight, Check } from "lucide-react"
+import { Monitor, Map, Trash, GraduationCap, ArrowRight, Check, HandCoins } from "lucide-react"
 
 import gestaoEscolarImg from "@/assets/solutions/yhankoEduca.png";
 import webAppsImg from "@/assets/solutions/turismo.png";
@@ -12,36 +12,36 @@ const products = [
     id: 1,
     name: "YhankoEduca",
     description: "Plataforma completa para gestão educacional com controle de alunos, notas e comunicação.",
-    features: ["Gestão de Alunos", "Controle de Notas", "Comunicação Integrada"],
+    features: ["Gestão de escolar", "Controle de Notas", "Comunicação entre encarregados e docentes."],
     icon: GraduationCap,
-    color: "from-primary to-purple-light",
+    color: "purple",
     image: gestaoEscolarImg,
   },
   {
     id: 2,
     name: "Turismo",
     description: "Plataforma para turismo que junta turistas, entidade turísticas e guias turistas",
-    features: ["React & Next.js", "Design Responsivo", "Alta Performance"],
-    icon: Monitor,
-    color: "from-secondary to-pink-light",
+    features: ["Turistas que amam explorar Angola, empresas de turiesmos e com guias qualificados."],
+    icon: Map,
+    color: "green",
     image: webAppsImg,
   },
   {
     id: 3,
     name: "Eco-kitoco",
     description: "Plataforma de recolha de lixo que promove a higiene comunitária, a saúde e bem-estar ambiental.",
-    features: ["React & Next.js", "Design Responsivo", "Alta Performance"],
-    icon: Smartphone,
-    color: "from-primary to-secondary",
+    features: ["Uma comunidade limpa, saúdavel contribui para um país mais seguro."],
+    icon: Trash,
+    color: "primary",
     image: mobileAppsImg,
   },
   {
     id: 4,
     name: "KwanzaConnect",
     description: "Plataforma que une compradores, vendores e casas de câmbio em um só lugar.",
-    features: ["React & Next.js", "Design Responsivo", "Alta Performance"],
-    icon: Cloud,
-    color: "from-purple-light to-primary",
+    features: ["Plataforma apropriada para profissionais e não só que ganham  moedas estrangeiras"],
+    icon: HandCoins,
+    color: "purple",
     image: cloudImg,
   },
 ];

@@ -44,7 +44,6 @@ export function ProcessSection() {
         {/* Process Timeline */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary hidden lg:block" />
           
           {/* Desktop Grid */}
           <div className="hidden lg:grid grid-cols-5 gap-4 mb-8">
@@ -59,7 +58,7 @@ export function ProcessSection() {
                 <div className="flex flex-col items-center">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 z-10 glow-effect"
+                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 z-10 glow-effect"
                   >
                     <phase.icon className="w-7 h-7 text-foreground" />
                   </motion.div>
@@ -85,7 +84,7 @@ export function ProcessSection() {
                 <div className="flex flex-col items-center">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-16 h-16 rounded-xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center mb-4 z-10 glow-effect-pink"
+                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 z-10 glow-effect-pink"
                   >
                     <phase.icon className="w-7 h-7 text-foreground" />
                   </motion.div>
@@ -109,7 +108,7 @@ export function ProcessSection() {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border"
               >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${index < 5 ? 'from-primary to-secondary' : 'from-secondary to-primary'} flex items-center justify-center flex-shrink-0`}>
+                <div className={`w-12 h-12 rounded-xl ${index < 5 ? 'from-primary to-secondary' : 'from-secondary to-primary'} flex items-center justify-center flex-shrink-0`}>
                   <phase.icon className="w-6 h-6 text-foreground" />
                 </div>
                 <div>
