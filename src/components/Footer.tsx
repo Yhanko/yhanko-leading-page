@@ -1,7 +1,7 @@
-emailjs.init("md-N74Y77bS9eGpsm");
+
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowUp, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, ArrowUp, MessageCircle } from "lucide-react";
 
 import yhankoLogo from "@/assets/ee 1.svg";
 
