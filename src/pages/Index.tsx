@@ -3,12 +3,13 @@ import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
 import { SolutionsSection } from "@/components/SolutionsSection";
 import { SectorsSection } from "@/components/SectorsSection";
-import { CarouselSection } from "@/components/CarouselSection";
+import { ClientsSection } from "@/components/ClientsSection";
 import { TeamYhanko } from "@/components/TeamSection";
 import { EventsSection } from "@/components/EventsSection";
 import { AcademySection } from "@/components/AcademySection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { FAQSection } from "@/components/FAQSection";
+import { PartnersSection } from "@/components/PartnersSection";
 import { Footer } from "@/components/Footer";
 
 // Client logos
@@ -62,28 +63,14 @@ const Index = () => {
         <AboutSection />
         <SolutionsSection />
         <SectorsSection />
-        <CarouselSection
-          id="clientes"
-          tag="Confiança"
-          title="Nossos"
-          highlightedTitle="Clientes"
-          items={clients}
-          isLogo={true}
-        />
-        <CarouselSection
-          id="parceiros"
-          tag="Colaboração"
-          title="Nossos"
-          highlightedTitle="Parceiros"
-          items={partners}
-          isLogo={true}
-        />
+        <ClientsSection />
         <TeamYhanko
         />
         <EventsSection />
         <AcademySection />
         <ProcessSection />
         <FAQSection />
+        <PartnersSection />
       </main>
       <Footer />
     </div>
