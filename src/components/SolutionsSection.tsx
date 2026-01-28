@@ -170,7 +170,7 @@ export function SolutionsSection() {
                   {/* Floating badge */}
                   <div className="absolute top-4 right-4">
                     <span className="px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-sm border border-border text-xs font-medium">
-                      ✨ Premium
+                      ✨ 
                     </span>
                   </div>
                 </div>
@@ -203,15 +203,6 @@ export function SolutionsSection() {
                       </motion.span>
                     ))}
                   </div>
-                  
-                  <motion.button
-                    whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.3)" }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-foreground font-semibold flex items-center justify-center gap-2 group"
-                  >
-                    Saber Mais
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </motion.button>
                 </div>
               </motion.div>
             </AnimatePresence>

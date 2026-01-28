@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowUp } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowUp, MessageCircle } from "lucide-react";
 import yhankoLogo from "@/assets/ee 1.svg";
 
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/YhankoTech" },
   { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/yhankotech/" },
   { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/yhanko-corporation/?viewAsMember=true" },
+  { name: "WhatsApp", icon: MessageCircle, href: ""}
 ];
 
 const quickLinks = [

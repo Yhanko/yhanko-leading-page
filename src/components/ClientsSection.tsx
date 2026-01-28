@@ -92,7 +92,7 @@ export function ClientsSection() {
           {[
             { value: "100%", label: "Satisfação" },
             { value: "24/7", label: "Suporte" },
-            { value: "5+", label: "Anos de Parceria" },
+            { value: "2+", label: "Anos de Parceria" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <span className="text-3xl md:text-4xl font-bold gradient-text">{stat.value}</span>
