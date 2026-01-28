@@ -33,7 +33,7 @@ export function Footer() {
 
     emailjs.sendForm(
       "service_d2jfzul",
-      "template_6lb3158",
+      "template_sl18u6i",
       e.target,
       "md-N74Y77bS9eGpsm"
     ).then(
