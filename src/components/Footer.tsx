@@ -135,6 +135,7 @@ export function Footer() {
             <form onSubmit={sendEmail} className="flex flex-col gap-3">
               <input
                 type="email"
+                name="user_email"
                 placeholder="Seu e-mail"
                 className="px-4 py-3 rounded-xl bg-card border border-border focus:border-primary focus:outline-none transition-colors"
               />
