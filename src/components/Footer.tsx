@@ -30,7 +30,7 @@ export function Footer() {
       "service_d2jfzul",
       "template_6lb3158",
       e.target,
-      "SUA_PUBLIC_KEY"
+      "md-N74Y77bS9eGpsm"
     ).then(
       () => {
         alert("E-mail enviado com sucesso!");
