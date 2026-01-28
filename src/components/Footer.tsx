@@ -6,7 +6,7 @@ const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/YhankoTech" },
   { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/yhankotech/" },
   { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/yhanko-corporation/?viewAsMember=true" },
-  { name: "WhatsApp", icon: MessageCircle, href: ""}
+  { name: "WhatsApp", icon: MessageCircle, href: "https://wa.me/947315059"}
 ];
 
 const quickLinks = [
@@ -86,7 +86,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+244900000000" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="tel:+244947315059" className="text-muted-foreground hover:text-foreground transition-colors">
                   +244 947 315 059
                 </a>
               </li>
