@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowUp, MessageCircle } from "lucide-react";
 import yhankoLogo from "@/assets/ee 1.svg";
+import emailjs from "emailjs-com";
 
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/YhankoTech" },
@@ -20,6 +21,27 @@ const quickLinks = [
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_d2jfzul",
+      "template_6lb3158",
+      e.target,
+      "SUA_PUBLIC_KEY"
+    ).then(
+      () => {
+        alert("E-mail enviado com sucesso!");
+      },
+      (error) => {
+        alert("Erro ao enviar");
+        console.error(error);
+      }
+    );
+
+    e.target.reset();
   };
 
   return (
@@ -110,7 +132,7 @@ export function Footer() {
             <p className="text-muted-foreground mb-4">
               Receba novidades e atualizações sobre tecnologia.
             </p>
-            <form className="flex flex-col gap-3">
+            <form onSubmit={sendEmail} className="flex flex-col gap-3">
               <input
                 type="email"
                 placeholder="Seu e-mail"
