@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowUp, MessageCircle } from "lucide-react";
 import yhankoLogo from "@/assets/ee 1.svg";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/YhankoTech" },
