@@ -43,7 +43,6 @@ export function Footer() {
       },
       (error) => {
         toast.error("Erro ao enviar. Tente novamente.");
-        console.error("EmailJS error:", error);
       }
     );
 
