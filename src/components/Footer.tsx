@@ -49,6 +49,7 @@ export function Footer() {
                   key={social.name}
                   href={social.href}
                   whileHover={{ scale: 1.1, y: -2 }}
+                  target="_blank"
                   className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
                 >
                   <social.icon className="w-5 h-5" />
@@ -86,13 +87,17 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+244947315059" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="tel:+244947315059" 
+                  target="_blank"
+                  className="text-muted-foreground hover:text-foreground transition-colors">
                   +244 947 315 059
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:contato@yhanko.com" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:geral@yhanko.com" 
+                  target="_blank"
+                  className="text-muted-foreground hover:text-foreground transition-colors">
                   geral@yhanko.com
                 </a>
               </li>
