@@ -5,11 +5,7 @@ const partners = [
   "FDF",
   "Educa e Realiza", 
   "Ação Digital",
-  "TechVentures",
-  "Innovation Hub",
-  "Digital Partners",
-  "CloudTech",
-  "DataFlow",
+  "Ghetto Art",
 ];
 
 export function PartnersSection() {
