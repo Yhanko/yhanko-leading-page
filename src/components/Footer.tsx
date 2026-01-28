@@ -42,7 +42,7 @@ export function Footer() {
       e.target.reset();
       },
       (error) => {
-        toast.error("Erro ao enviar. Tente novamente.");
+        toast.error("Alguma coisa aconteceu, se persistir por favor nos contacte!");
       }
     );
 
