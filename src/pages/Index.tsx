@@ -12,25 +12,6 @@ import { FAQSection } from "@/components/FAQSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { Footer } from "@/components/Footer";
 
-// Client logos
-import roseartAtelier from "@/assets/clients/rosarte-logo.png";
-import margem from "@/assets/clients/margem.png";
-
-// Partner logos
-import fdf from "@/assets/partners/fdf.jpeg";
-import educaRealiza from "@/assets/partners/educa-e-realiza.png";
-import acaoDigital from "@/assets/partners/acao-digital.png";
-import ghettoArt from "@/assets/clients/ghetto-art.png";
-
-// Team photos
-import cajamba from "@/assets/team/romeu.jpeg";
-import osvaldo from "@/assets/team/osvaldo.jpeg";
-import bruno from "@/assets/team/bruno.png";
-import helio from "@/assets/team/helio.jpeg";
-import joel from "@/assets/team/joel.png";
-import kalei from "@/assets/team/kalei.jpg";
-import manuel from "@/assets/team/manuel.jpeg";
-
 
 const Index = () => {
   return (
