@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { Monitor, Map, Trash, GraduationCap, ArrowRight, Check, HandCoins } from "lucide-react"
+import { Map, Trash, GraduationCap, ArrowRight, Check, HandCoins } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import gestaoEscolarImg from "@/assets/solutions/yhankoEduca.png";
 import webAppsImg from "@/assets/solutions/turismo.png";
@@ -16,6 +17,7 @@ const products = [
     icon: GraduationCap,
     color: "purple",
     image: gestaoEscolarImg,
+    url: "",
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ const products = [
     icon: Map,
     color: "green",
     image: webAppsImg,
+    url: ""
   },
   {
     id: 3,
@@ -34,6 +37,7 @@ const products = [
     icon: Trash,
     color: "primary",
     image: mobileAppsImg,
+    url: "https://volunteer-eco-bs91.vercel.app/",
   },
   {
     id: 4,
@@ -43,6 +47,7 @@ const products = [
     icon: HandCoins,
     color: "purple",
     image: cloudImg,
+    url: "",
   },
 ];
 
@@ -156,6 +161,7 @@ export function SolutionsSection() {
               >
                 {/* Product Image with overlay */}
                 <div className="h-56 md:h-72 relative overflow-hidden group">
+                  
                   <motion.img 
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
@@ -164,6 +170,7 @@ export function SolutionsSection() {
                     alt={activeProduct.name}
                     className="w-full h-full object-cover"
                   />
+                  
                   <div className={`absolute inset-0 bg-gradient-to-t ${activeProduct.color} opacity-30`} />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                   
@@ -173,6 +180,7 @@ export function SolutionsSection() {
                       ✨ 
                     </span>
                   </div>
+                
                 </div>
                 
                 {/* Product Info */}
@@ -182,6 +190,11 @@ export function SolutionsSection() {
                       <activeProduct.icon className="w-5 h-5 text-foreground" />
                     </div>
                     <h3 className="text-2xl font-bold">{activeProduct.name}</h3>
+                    <Link to={ activeProduct.url} target="_blank" 
+                      className="ml-auto inline-flex  items-center justify-center px-4 py-1.5 text-sm font-semibold rounded-lg border border-primary text-primary 
+                      hover:bg-primary hover:text-white transition-all duration-200 whitespace-nowrap">
+                      <span>Visitar</span>
+                  </Link>
                   </div>
                   
                   <p className="text-muted-foreground leading-relaxed mb-6">
