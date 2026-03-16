@@ -50,15 +50,15 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 rounded-full bg-primary/20"
+              className="absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary/20"
               initial={{
-                x: Math.random() * window.innerWidth,
-                y: window.innerHeight + 20,
+                x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 400),
+                y: (typeof window !== "undefined" ? window.innerHeight : 800) + 20,
                 scale: Math.random() * 0.5 + 0.5,
               }}
               animate={{
                 y: -20,
-                x: Math.random() * window.innerWidth,
+                x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 400),
               }}
               transition={{
                 duration: Math.random() * 4 + 3,
@@ -71,7 +71,7 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
           {/* Main content */}
           <motion.div
-            className="relative z-10 flex flex-col items-center gap-8 px-6 text-center"
+            className="relative z-10 flex flex-col items-center gap-5 sm:gap-6 md:gap-8 px-4 sm:px-6 text-center w-full max-w-sm sm:max-w-md mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -91,19 +91,19 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               <img
                 src={yhankoLogo}
                 alt="Yhanko"
-                className="relative w-24 h-24 md:w-32 md:h-32 object-contain"
+                className="relative w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 object-contain"
               />
             </motion.div>
 
             {/* Welcome text */}
             <motion.div
-              className="space-y-4"
+              className="space-y-3 sm:space-y-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               <motion.h1
-                className="text-2xl md:text-3xl font-bold text-foreground"
+                className="text-xl xs:text-2xl sm:text-2xl md:text-3xl font-bold text-foreground"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5 }}
@@ -112,7 +112,7 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
               </motion.h1>
 
               <motion.p
-                className="text-muted-foreground text-sm md:text-base max-w-md leading-relaxed"
+                className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md leading-relaxed mx-auto"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.3, duration: 0.5 }}
@@ -122,38 +122,38 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
               {/* Device icons */}
               <motion.div
-                className="flex items-center justify-center gap-6 pt-2"
+                className="flex items-center justify-center gap-4 sm:gap-6 pt-1 sm:pt-2"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.6, duration: 0.5 }}
               >
                 <motion.div
-                  className="flex flex-col items-center gap-2 text-primary"
+                  className="flex flex-col items-center gap-1.5 sm:gap-2 text-primary"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
-                    <Monitor className="w-8 h-8" />
+                  <div className="p-2 sm:p-3 rounded-xl bg-primary/10 border border-primary/20">
+                    <Monitor className="w-6 h-6 sm:w-8 sm:h-8" />
                   </div>
-                  <span className="text-xs text-muted-foreground">Computador</span>
+                  <span className="text-[10px] sm:text-xs text-muted-foreground">Computador</span>
                 </motion.div>
 
-                <span className="text-muted-foreground text-lg">ou</span>
+                <span className="text-muted-foreground text-base sm:text-lg">ou</span>
 
                 <motion.div
-                  className="flex flex-col items-center gap-2 text-primary"
+                  className="flex flex-col items-center gap-1.5 sm:gap-2 text-primary"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
-                    <Tablet className="w-8 h-8" />
+                  <div className="p-2 sm:p-3 rounded-xl bg-primary/10 border border-primary/20">
+                    <Tablet className="w-6 h-6 sm:w-8 sm:h-8" />
                   </div>
-                  <span className="text-xs text-muted-foreground">Tablet</span>
+                  <span className="text-[10px] sm:text-xs text-muted-foreground">Tablet</span>
                 </motion.div>
               </motion.div>
             </motion.div>
 
             {/* Loading bar */}
             <motion.div
-              className="w-48 h-1 bg-muted rounded-full overflow-hidden mt-4"
+              className="w-36 xs:w-40 sm:w-48 h-1 bg-muted rounded-full overflow-hidden mt-2 sm:mt-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
@@ -168,7 +168,7 @@ export const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
             {/* Skip hint */}
             <motion.p
-              className="text-xs text-muted-foreground/60 mt-2"
+              className="text-[10px] sm:text-xs text-muted-foreground/60 mt-1 sm:mt-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2.5 }}

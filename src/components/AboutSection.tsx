@@ -31,51 +31,51 @@ export function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="quem-somos" className="py-24 relative overflow-hidden">
+    <section id="quem-somos" className="py-16 sm:py-20 md:py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
-      <div className="container mx-auto px-4" ref={ref}>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase mb-4 block">
+          <span className="text-primary font-semibold text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block">
             Sobre Nós
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Quem <span className="gradient-text">Somos</span>
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Somos uma empresa de desenvolvimento de software e soluções tecnológicas 
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-5 sm:mb-6 md:mb-8">
+              Somos uma empresa de desenvolvimento de software e soluções tecnológicas
               inovadoras multissectoriais com foco o propósito de transformar e simplisficar processos do dia a dia.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-7 md:mb-8">
               Transformamos desafios em soluções tecnológicas acessíveis, inovadoras e eficientes, conectando pessoas a um futuro mais inteligente com responsabilidade, transparência e inclusão.
             </p>
-            <div className="flex gap-8">
+            <div className="flex gap-6 sm:gap-8">
               <div className="text-center">
-                <span className="text-4xl font-bold text-purple-700">3+</span>
-                <p className="text-sm text-muted-foreground mt-1">Projetos</p>
+                <span className="text-3xl sm:text-4xl font-bold text-purple-700">3+</span>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Projetos</p>
               </div>
               <div className="text-center">
-                <span className="text-4xl font-bold text-purple-700">2+</span>
-                <p className="text-sm text-muted-foreground mt-1">Anos</p>
+                <span className="text-3xl sm:text-4xl font-bold text-purple-700">2+</span>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Anos</p>
               </div>
               <div className="text-center">
-                <span className="text-4xl font-bold text-purple-700">100%</span>
-                <p className="text-sm text-muted-foreground mt-1">Dedicação</p>
+                <span className="text-3xl sm:text-4xl font-bold text-purple-700">100%</span>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1">Dedicação</p>
               </div>
             </div>
           </motion.div>
@@ -85,7 +85,7 @@ export function AboutSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-3 sm:gap-4"
           >
             {features.map((feature, index) => (
               <motion.div
@@ -93,13 +93,13 @@ export function AboutSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all card-hover group"
+                className="p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-card border border-border hover:border-primary/50 transition-all card-hover group"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-3 sm:mb-4 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all">
+                  <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">{feature.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>

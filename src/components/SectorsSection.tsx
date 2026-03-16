@@ -16,7 +16,7 @@ const sectors = [
     id: 2,
     name: "Ambiental",
     description: "Plataformas e soluções que contribuem para uma comunidade e saúde melhor.",
-    icon: ambiental ,
+    icon: ambiental,
     color: "from-emerald-500 to-green-400",
   },
   {
@@ -33,28 +33,28 @@ export function SectorsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="sectores" className="py-24 relative">
+    <section id="sectores" className="py-16 sm:py-20 md:py-24 relative">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
-      <div className="container mx-auto px-4" ref={ref}>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase mb-4 block">
+          <span className="text-primary font-semibold text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block">
             Áreas de Atuação
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Sectores que <span className="gradient-text">Atuamos</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-2">
             Somos focados no sector educacional, mas abertos para trazer solução para vários sectores.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {sectors.map((sector, index) => (
             <motion.div
               key={sector.id}
@@ -63,25 +63,31 @@ export function SectorsSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group"
             >
-              <div className="h-full rounded-2xl bg-card border border-border overflow-hidden card-hover">
+              <div className="h-full rounded-xl sm:rounded-2xl bg-card border border-border overflow-hidden card-hover">
                 {/* Image/Icon Area */}
-                <div className={`h-48 bg-gradient-to-br ${sector.color} flex items-center justify-center relative overflow-hidden`}>
+                <div
+                  className={`h-40 xs:h-44 sm:h-48 md:h-52 bg-gradient-to-br ${sector.color} flex items-center justify-center relative overflow-hidden`}
+                >
                   <div className="absolute inset-0 opacity-20">
-                    <div 
+                    <div
                       className="h-full w-full"
                       style={{
                         backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground) / 0.4) 1px, transparent 0)`,
-                        backgroundSize: '24px 24px'
+                        backgroundSize: "24px 24px",
                       }}
                     />
                   </div>
-                  <img src={sector.icon} className="w-full h-full text-foreground/90 group-hover:scale-110 transition-transform duration-300 object-cover object-center" />
+                  <img
+                    src={sector.icon}
+                    className="w-full h-full text-foreground/90 group-hover:scale-110 transition-transform duration-300 object-cover object-center"
+                    alt={sector.name}
+                  />
                 </div>
-                
+
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">{sector.name}</h3>
-                  <p className="text-muted-foreground">{sector.description}</p>
+                <div className="p-4 sm:p-5 md:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{sector.name}</h3>
+                  <p className="text-muted-foreground text-sm sm:text-base">{sector.description}</p>
                 </div>
               </div>
             </motion.div>

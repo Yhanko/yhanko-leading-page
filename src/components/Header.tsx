@@ -31,24 +31,29 @@ export function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-effect py-3" : "py-6"
+        isScrolled ? "glass-effect py-2 sm:py-3" : "py-3 sm:py-4 md:py-6"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <motion.a
           href="#inicio"
           whileHover={{ scale: 1.05 }}
+          className="flex-shrink-0"
         >
-          <img src={yhankoLogo} alt="Yhanko" className="h-16 md:h-16" />
+          <img
+            src={yhankoLogo}
+            alt="Yhanko"
+            className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto"
+          />
         </motion.a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
           {navLinks.map((link) => (
             <motion.a
               key={link.name}
               href={link.href}
-              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+              className="px-2 xl:px-3 py-2 text-xs xl:text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group whitespace-nowrap"
               whileHover={{ scale: 1.05 }}
             >
               {link.name}
@@ -60,9 +65,10 @@ export function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+          aria-label="Toggle menu"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
@@ -73,9 +79,9 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-effect mt-2 mx-4 rounded-lg overflow-hidden"
+            className="lg:hidden glass-effect mt-2 mx-3 sm:mx-4 rounded-xl overflow-hidden"
           >
-            <div className="flex flex-col p-4">
+            <div className="flex flex-col p-2 sm:p-4">
               {navLinks.map((link, index) => (
                 <motion.a
                   key={link.name}
@@ -84,7 +90,7 @@ export function Header() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="py-3 px-4 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
+                  className="py-2.5 sm:py-3 px-3 sm:px-4 text-sm sm:text-base text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-colors"
                 >
                   {link.name}
                 </motion.a>

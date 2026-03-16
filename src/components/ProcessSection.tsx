@@ -20,33 +20,32 @@ export function ProcessSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="processo" className="py-24 relative overflow-hidden">
+    <section id="processo" className="py-16 sm:py-20 md:py-24 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
-      <div className="container mx-auto px-4" ref={ref}>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <span className="text-primary font-semibold text-sm tracking-wider uppercase mb-4 block">
+          <span className="text-primary font-semibold text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block">
             Metodologia
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Processo de <span className="gradient-text">Desenvolvimento</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-2">
             Nossa metodologia garante qualidade em cada fase do projeto
           </p>
         </motion.div>
 
         {/* Process Timeline */}
         <div className="relative">
-          {/* Connection Line */}
-          
-          {/* Desktop Grid */}
-          <div className="hidden lg:grid grid-cols-5 gap-4 mb-8">
+
+          {/* Desktop Grid (lg+) — two rows of 5 */}
+          <div className="hidden lg:grid grid-cols-5 gap-4 xl:gap-6 mb-8 xl:mb-10">
             {phases.slice(0, 5).map((phase, index) => (
               <motion.div
                 key={phase.step}
@@ -58,21 +57,21 @@ export function ProcessSection() {
                 <div className="flex flex-col items-center">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 z-10 glow-effect"
+                    className="w-14 h-14 xl:w-16 xl:h-16 rounded-xl flex items-center justify-center mb-3 xl:mb-4 z-10 glow-effect"
                   >
-                    <phase.icon className="w-7 h-7 text-foreground" />
+                    <phase.icon className="w-6 h-6 xl:w-7 xl:h-7 text-foreground" />
                   </motion.div>
                   <div className="text-center">
                     <span className="text-xs text-primary font-semibold">Fase {phase.step}</span>
-                    <h4 className="font-semibold text-sm mt-1">{phase.name}</h4>
-                    <p className="text-xs text-muted-foreground mt-2">{phase.description}</p>
+                    <h4 className="font-semibold text-xs xl:text-sm mt-1">{phase.name}</h4>
+                    <p className="text-xs text-muted-foreground mt-1 xl:mt-2">{phase.description}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
-          
-          <div className="hidden lg:grid grid-cols-5 gap-4">
+
+          <div className="hidden lg:grid grid-cols-5 gap-4 xl:gap-6">
             {phases.slice(5).map((phase, index) => (
               <motion.div
                 key={phase.step}
@@ -84,37 +83,88 @@ export function ProcessSection() {
                 <div className="flex flex-col items-center">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 z-10 glow-effect-pink"
+                    className="w-14 h-14 xl:w-16 xl:h-16 rounded-xl flex items-center justify-center mb-3 xl:mb-4 z-10 glow-effect-pink"
                   >
-                    <phase.icon className="w-7 h-7 text-foreground" />
+                    <phase.icon className="w-6 h-6 xl:w-7 xl:h-7 text-foreground" />
                   </motion.div>
                   <div className="text-center">
                     <span className="text-xs text-secondary font-semibold">Fase {phase.step}</span>
-                    <h4 className="font-semibold text-sm mt-1">{phase.name}</h4>
-                    <p className="text-xs text-muted-foreground mt-2">{phase.description}</p>
+                    <h4 className="font-semibold text-xs xl:text-sm mt-1">{phase.name}</h4>
+                    <p className="text-xs text-muted-foreground mt-1 xl:mt-2">{phase.description}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Mobile List */}
-          <div className="lg:hidden space-y-4">
+          {/* Tablet Grid (sm–md) — two rows of 5 compact */}
+          <div className="hidden sm:grid lg:hidden grid-cols-5 gap-3 mb-6">
+            {phases.slice(0, 5).map((phase, index) => (
+              <motion.div
+                key={phase.step}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="flex flex-col items-center">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="w-11 h-11 md:w-13 md:h-13 rounded-xl flex items-center justify-center mb-2 z-10 glow-effect"
+                  >
+                    <phase.icon className="w-5 h-5 text-foreground" />
+                  </motion.div>
+                  <div className="text-center">
+                    <span className="text-[10px] text-primary font-semibold">Fase {phase.step}</span>
+                    <h4 className="font-semibold text-[10px] md:text-xs mt-0.5 leading-tight">{phase.name}</h4>
+                    <p className="text-[10px] text-muted-foreground mt-1 hidden md:block">{phase.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="hidden sm:grid lg:hidden grid-cols-5 gap-3">
+            {phases.slice(5).map((phase, index) => (
+              <motion.div
+                key={phase.step}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.5 + index * 0.1 }}
+              >
+                <div className="flex flex-col items-center">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="w-11 h-11 md:w-13 md:h-13 rounded-xl flex items-center justify-center mb-2 z-10 glow-effect-pink"
+                  >
+                    <phase.icon className="w-5 h-5 text-foreground" />
+                  </motion.div>
+                  <div className="text-center">
+                    <span className="text-[10px] text-secondary font-semibold">Fase {phase.step}</span>
+                    <h4 className="font-semibold text-[10px] md:text-xs mt-0.5 leading-tight">{phase.name}</h4>
+                    <p className="text-[10px] text-muted-foreground mt-1 hidden md:block">{phase.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Mobile List (xs only) */}
+          <div className="sm:hidden space-y-3">
             {phases.map((phase, index) => (
               <motion.div
                 key={phase.step}
                 initial={{ opacity: 0, x: -30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border"
+                className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border"
               >
-                <div className={`w-12 h-12 rounded-xl ${index < 5 ? 'from-primary to-secondary' : 'from-secondary to-primary'} flex items-center justify-center flex-shrink-0`}>
-                  <phase.icon className="w-6 h-6 text-foreground" />
+                <div className={`w-10 h-10 rounded-xl ${index < 5 ? 'from-primary to-secondary' : 'from-secondary to-primary'} flex items-center justify-center flex-shrink-0`}>
+                  <phase.icon className="w-5 h-5 text-foreground" />
                 </div>
-                <div>
-                  <span className="text-xs text-primary font-semibold">Fase {phase.step}</span>
-                  <h4 className="font-semibold">{phase.name}</h4>
-                  <p className="text-sm text-muted-foreground">{phase.description}</p>
+                <div className="min-w-0">
+                  <span className="text-[10px] text-primary font-semibold">Fase {phase.step}</span>
+                  <h4 className="font-semibold text-sm leading-tight">{phase.name}</h4>
+                  <p className="text-xs text-muted-foreground">{phase.description}</p>
                 </div>
               </motion.div>
             ))}
