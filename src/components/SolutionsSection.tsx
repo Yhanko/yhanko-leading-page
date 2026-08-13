@@ -17,17 +17,17 @@ const products = [
     icon: GraduationCap,
     color: "purple",
     image: gestaoEscolarImg,
-    url: "",
+    url: "https://school-leadingpage.onrender.com",
   },
   {
     id: 2,
-    name: "Turismo",
-    description: "Plataforma para turismo que junta turistas, entidade turísticas e guias turistas",
-    features: ["Turistas que amam explorar Angola, empresas de turiesmos e com guias qualificados."],
+    name: "MoboGo",
+    description: "Plataforma para pagamento de táxi",
+    features: ["Carteira que facilita a vida de quem gosta de viajar."],
     icon: Map,
     color: "green",
     image: webAppsImg,
-    url: "",
+    url: "https://mobgo-admin.onrender.com",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const products = [
     icon: Trash,
     color: "primary",
     image: mobileAppsImg,
-    url: "https://volunteer-eco-bs91.vercel.app/",
+    url: "https://volunteer-eco.vercel.app/",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const products = [
     icon: HandCoins,
     color: "purple",
     image: cloudImg,
-    url: "",
+    url: "https://kwanza-connect-frontend.vercel.app/",
   },
 ];
 
