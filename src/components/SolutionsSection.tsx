@@ -27,7 +27,7 @@ const products = [
     icon: Map,
     color: "green",
     image: webAppsImg,
-    url: "https://mobgo-admin.onrender.com",
+    url: "https://mobogo.onrender.com/",
   },
   {
     id: 3,
